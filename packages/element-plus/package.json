@@ -1,0 +1,6 @@
+{
+  "name": "element-plus",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  }
+}

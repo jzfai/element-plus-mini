@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "packageManager": "pnpm@7.3.0",
+  "scripts": {
+    "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
+    "clean:dist": "rimraf dist",
+    "play:dev": "pnpm -C play play:dev",
+    "docs:dev": "pnpm -C docs docs:dev",
+    "build:start": "pnpm -C internal/build start"
+  },
+  "dependencies": {
+    "@element-plus/components": "workspace:*",
+    "@element-plus/theme-chalk": "workspace:*",
+    "@element-plus/build-utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": ">= 16"
+  }
+}

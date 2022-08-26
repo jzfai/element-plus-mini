@@ -1,0 +1,23 @@
+{
+  "name": "@element-plus/docs",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vitepress dev ."
+  },
+  "dependencies": {
+    "markdown-it": "13.0.1",
+    "prism-theme-vars": "^0.2.3"
+  },
+  "devDependencies": {
+    "@iconify-json/ri": "^1.1.3",
+    "element-plus": "npm:element-plus@latest",
+    "markdown-it-container": "^3.0.0",
+    "unocss": "^0.33.5",
+    "unplugin-icons": "^0.14.6",
+    "vitepress": "^0.22.4",
+    "prismjs": "^1.28.0",
+    "chalk": "^4.1.2",
+    "consola": "^2.15.3",
+    "escape-html": "^1.0.3"
+  }
+}
