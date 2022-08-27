@@ -1,0 +1,49 @@
+// @ts-ignore
+import path, { resolve } from "path";
+// @ts-ignore
+import fs from "fs";
+import MarkdownIt from "markdown-it";
+import mdContainer from "markdown-it-container";
+const localMd = MarkdownIt();
+
+// import { highlight } from '../utils/highlight'
+import { docRoot } from "@element-plus/build-utils";
+
+//.vue change to  html
+import { highlight } from "../utils/highlight";
+export const mdPlugin = (md) => {
+  //demo -> the token name such as type container_demo_open
+  md.use(mdContainer, "demo", {
+    validate(params) {
+      return !!params.trim().match(/^demo\s*(.*)$/);
+    },
+    render(tokens, idx) {
+      const m = tokens[idx].info.trim().match(/^demo\s*(.*)$/);
+      if (tokens[idx].nesting === 1 /* means the tag is opening */) {
+        m.at(-1);
+        const description = m && m.length > 1 ? m[1] : "";
+        const sourceFileToken = tokens[idx + 2];
+        let source = "";
+        // basic/basic
+        const sourceFile = sourceFileToken.children?.[0].content ?? "";
+
+        if (sourceFileToken.type === "inline") {
+          source = fs.readFileSync(
+            path.resolve(docRoot, "examples", `${sourceFile}.vue`),
+            "utf-8"
+          );
+        }
+
+        if (!source) throw new Error(`Incorrect source file: ${sourceFile}`);
+
+        return `<Demo :demos="demos" source="${encodeURIComponent(
+          highlight(source, "vue")
+        )}" path="${sourceFile}" raw-source="${encodeURIComponent(
+          source
+        )}" description="${encodeURIComponent(localMd.render(description))}">`;
+      } else {
+        return "</Demo>";
+      }
+    },
+  });
+};

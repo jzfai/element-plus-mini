@@ -4,14 +4,14 @@
 
 > A minimal version of element-plus
 
-a minimal version of  element-plus  , you can learn it better than learning element-plus directly
+a minimal version of  element-plus , you can learn it better than learning element-plus directly
 
 
 
 
 ## Related items
 
-the vue3 version of   [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
+the vue3 version of  [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
 - [vue3-element-plus](https://github.com/jzfai/vue3-admin-plus.git)
 > development and  experience：two words  Really fragrant！！！！！
 

@@ -1,0 +1,11 @@
+.history
+.idea
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+yarn*
+ts-out-dir
+coverage
+git
