@@ -17,7 +17,8 @@ the vue3 version of  [vue-element-admin](https://github.com/PanJiaChen/vue-eleme
 
 
 ## Related Demo
-![image](https://user-images.githubusercontent.com/35098590/187024995-41e39f22-1973-42dd-896a-f543f658785c.png)
+![image](https://user-images.githubusercontent.com/35098590/187025019-ecb35cf6-9545-43a7-862b-13f47f0a339d.png)
+
 
 
 ## Build Setup
