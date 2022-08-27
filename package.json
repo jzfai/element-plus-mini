@@ -6,7 +6,9 @@
     "clean:dist": "rimraf dist",
     "play:dev": "pnpm -C play play:dev",
     "docs:dev": "pnpm -C docs docs:dev",
-    "build:start": "pnpm -C internal/build start"
+    "build:start": "pnpm -C internal/build start",
+    "stub": "pnpm run -r --parallel stub",
+    "postinstall": "pnpm stub"
   },
   "dependencies": {
     "@element-plus/components": "workspace:*",

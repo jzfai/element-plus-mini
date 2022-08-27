@@ -37,6 +37,10 @@ export default defineConfig(async () => {
       UnoCSS(),
       MarkdownTransform(),
       Inspect()
-    ]
+    ],
+
+    optimizeDeps: {
+      include: ['element-plus', '@element-plus/icons-vue', '@vueuse/core']
+    }
   }
 })
