@@ -9,3 +9,6 @@ yarn*
 ts-out-dir
 coverage
 git
+pnpm-lock.yaml
+*.css.map
+theme-chalk/src/**/*.css
