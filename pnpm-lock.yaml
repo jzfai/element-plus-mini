@@ -8,14 +8,18 @@ importers:
       '@element-plus/components': workspace:*
       '@element-plus/theme-chalk': workspace:*
       '@types/node': '*'
+      '@types/sass': ^1.43.1
       prettier: ^2.7.1
+      sass: ^1.53.0
     dependencies:
       '@element-plus/build-utils': link:internal/build-utils
       '@element-plus/components': link:packages/components
       '@element-plus/theme-chalk': link:packages/theme-chalk
     devDependencies:
       '@types/node': 18.7.8
+      '@types/sass': 1.43.1
       prettier: 2.7.1
+      sass: 1.54.5
 
   docs:
     specifiers:
@@ -887,6 +891,12 @@ packages:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
       '@types/node': 18.7.8
+
+  /@types/sass/1.43.1:
+    resolution: {integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g==}
+    dependencies:
+      '@types/node': 18.7.8
+    dev: true
 
   /@types/vinyl/2.0.6:
     resolution: {integrity: sha512-ayJ0iOCDNHnKpKTgBG6Q6JOnHTj9zFta+3j2b8Ejza0e4cvRyMn0ZoLEmbPrTHe5YYRlDYPvPWVdV4cTaRyH7g==}

@@ -1,0 +1,50 @@
+@use 'sass:map';
+
+@use 'common/var' as *;
+@use 'mixins/button' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+@use 'mixins/var' as *;
+
+// getCssVar('button', 'text-color') => var(--el-button-text-color)
+//@function getCssVar($args...) {
+//  @return var(#{joinVarName($args)});
+//}
+
+/*
+  .el-button {
+  --el-button-font-weight: var(--el-font-weight-primary);
+}
+*/
+@include b(button) {
+  @include set-component-css-var('button', $button);
+}
+
+@debug getCssVar('button', 'font-weight');
+
+/*
+  .el-button{}
+*/
+@include b(button) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 1;
+  // min-height will expand when in flex
+  height: map.get($input-height, 'default');
+  white-space: nowrap;
+  cursor: pointer;
+  color: getCssVar('button', 'text-color');
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.1s;
+  font-weight: getCssVar('button', 'font-weight');
+  user-select: none; //是否可以选择文本
+  vertical-align: middle;
+  -webkit-appearance: none; //移除默认样式
+  background-color: getCssVar('button', 'bg-color');
+  border: getCssVar('border');
+  border-color: getCssVar('button', 'border-color');
+}

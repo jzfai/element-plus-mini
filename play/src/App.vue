@@ -3,6 +3,7 @@
 <template>
   <div>
     <el-badge />
+    <el-button class="el-button el-button--warning">el-button</el-button>
   </div>
 </template>
 
