@@ -19,7 +19,7 @@ export * from './src'
 const buildModules = runTask('buildModules')
 const buildFullBundle = runTask('buildFullBundle')
 
-//theme scss style
+//  dist/element-plus/dist
 export const copyFullStyle = async () => {
   await mkdir(path.resolve(epOutput, 'dist'), { recursive: true })
   await copyFile(path.resolve(epOutput, 'theme-chalk/index.css'), path.resolve(epOutput, 'dist/index.css'))

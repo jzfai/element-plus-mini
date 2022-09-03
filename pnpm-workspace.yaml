@@ -1,5 +1,6 @@
 packages:
   - packages/*
   - docs
+  - mini-demo
   - play
   - internal/*

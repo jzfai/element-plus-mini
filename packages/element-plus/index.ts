@@ -1,4 +1,7 @@
-// import installer from './defaults'
+import installer from './defaults'
+export const install = installer.install
+export const version = installer.version
+export default installer
 export * from '@element-plus/components'
 // export * from '@element-plus/constants'
 // export * from '@element-plus/directives'

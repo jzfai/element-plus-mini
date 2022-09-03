@@ -46,6 +46,8 @@ function buildThemeChalk() {
 
 /**
  * copy from packages/theme-chalk/dist to dist/element-plus/theme-chalk
+ * src --> input the file source
+ * dest --> the build file output
  */
 export function copyThemeChalkBundle() {
   return src(`${distFolder}/**`).pipe(dest(distBundle))
@@ -53,6 +55,7 @@ export function copyThemeChalkBundle() {
 
 /**
  * copy source file to packages
+ * src/** -> dist/element-plus/theme-chalk/src
  */
 export function copyThemeChalkSource() {
   return src(path.resolve(__dirname, 'src/**')).pipe(dest(path.resolve(distBundle, 'src')))

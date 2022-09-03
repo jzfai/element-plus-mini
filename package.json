@@ -11,9 +11,9 @@
     "postinstall": "pnpm stub"
   },
   "dependencies": {
+    "@element-plus/build-utils": "workspace:*",
     "@element-plus/components": "workspace:*",
-    "@element-plus/theme-chalk": "workspace:*",
-    "@element-plus/build-utils": "workspace:*"
+    "@element-plus/theme-chalk": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "*",
