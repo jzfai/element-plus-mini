@@ -1,4 +1,3 @@
-// @ts-ignore
 import path from 'path'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import { rollup } from 'rollup'
@@ -13,10 +12,8 @@ import { PKG_BRAND_NAME, PKG_CAMELCASE_LOCAL_NAME, PKG_CAMELCASE_NAME } from '@e
 import { epOutput, epRoot, localeRoot } from '@element-plus/build-utils'
 import { target } from '../build-info'
 import { formatBundleFilename, generateExternal, withTaskName, writeBundles } from '../utils'
-// @ts-ignore
 import { version } from '../../../../packages/element-plus/version'
 const banner = `/*! ${PKG_BRAND_NAME} v${version} */\n`
-// @ts-ignore
 import glob from 'fast-glob'
 
 import { camelCase, upperFirst } from 'lodash'

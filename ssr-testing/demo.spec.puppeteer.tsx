@@ -1,13 +1,9 @@
-// @ts-ignore
 import path from 'path'
 import { createApp } from 'vue'
 import { renderToString } from '@vue/server-renderer'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
-// @ts-ignore
 import puppeteer from 'puppeteer'
-// @ts-ignore
 import glob from 'fast-glob'
-// @ts-ignore
 import ElementPlus from '../dist/element-plus'
 export const ID_INJECTION_KEY = Symbol('elIdInjection')
 import type { Browser } from 'puppeteer'

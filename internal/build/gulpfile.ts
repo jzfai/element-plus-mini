@@ -1,14 +1,11 @@
-// @ts-ignore
 import path from 'path'
-// @ts-ignore
-import { copyFile, mkdir } from 'fs/promises'
-import { copy } from 'fs-extra'
-// @ts-ignore
-import { parallel, series } from 'gulp'
-import { buildOutput, epOutput, epPackage, projRoot } from '@element-plus/build-utils'
 
-// @ts-ignore
-import { buildConfig, run, runTask, withTaskName } from './src/utils'
+import { copyFile, mkdir } from 'fs/promises'
+
+import { parallel, series } from 'gulp'
+import { epOutput, epPackage, projRoot } from '@element-plus/build-utils'
+
+import { run, runTask, withTaskName } from './src/utils'
 
 //before build clean
 const clean = withTaskName('clean', () => run('pnpm run clean'))

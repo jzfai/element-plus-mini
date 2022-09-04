@@ -1,4 +1,3 @@
-// @ts-ignore
 import Badge from './src/badge.vue'
 
 const withInstall = (main) => {

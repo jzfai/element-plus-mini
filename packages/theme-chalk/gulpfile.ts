@@ -1,22 +1,14 @@
-// @ts-ignore
 import path from 'path'
 const distFolder = path.resolve(__dirname, 'dist')
 import { epOutput } from '@element-plus/build-utils'
 const distBundle = path.resolve(epOutput, 'theme-chalk')
 import { dest, parallel, series, src } from 'gulp'
-
 //buildThemeChalk
-// @ts-ignore
 import chalk from 'chalk'
-// @ts-ignore
 import gulpSass from 'gulp-sass'
-// @ts-ignore
 import dartSass from 'sass'
-// @ts-ignore
 import autoprefixer from 'gulp-autoprefixer'
-// @ts-ignore
 import cleanCSS from 'gulp-clean-css'
-// @ts-ignore
 import rename from 'gulp-rename'
 import consola from 'consola'
 function buildThemeChalk() {

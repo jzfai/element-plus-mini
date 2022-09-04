@@ -1,5 +1,4 @@
 import { spawn } from 'child_process'
-// @ts-ignore
 import chalk from 'chalk'
 import consola from 'consola'
 import { projRoot } from '@element-plus/build-utils'

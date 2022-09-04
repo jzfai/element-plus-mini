@@ -38,7 +38,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Text, computed, inject, ref, useSlots } from 'vue'
+import { Text, computed, ref, useSlots } from 'vue'
 defineOptions({
   name: 'ElButton'
 })

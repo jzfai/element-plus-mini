@@ -2,8 +2,8 @@
   <div>el-badge</div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 defineOptions({
-  name: "ElBadge",
-});
+  name: 'ElBadge'
+})
 </script>

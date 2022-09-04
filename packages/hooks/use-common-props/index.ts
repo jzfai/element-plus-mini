@@ -17,7 +17,7 @@ export const useSizeProp = {
 }
 
 //get size
-export const useSize = (fallback?, ignore = {}) => {
+export const useSize = (fallback?, ignore: any = {}) => {
   const emptyRef = ref(undefined)
   const size = ignore.prop ? emptyRef : useProp('size')
   const form = ignore.form ? { size: undefined } : inject(formContextKey, undefined)

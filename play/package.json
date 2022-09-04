@@ -15,13 +15,11 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
     "sass": "^1.26.9",
-    "typescript": "^4.6.4",
     "unocss": "^0.39.3",
     "unplugin-auto-import": "^0.8.8",
     "unplugin-element-plus": "^0.4.0",
     "unplugin-vue-components": "^0.19.6",
     "unplugin-vue-define-options": "^0.6.1",
-    "vite": "^3.0.7",
-    "vue-tsc": "^0.39.5"
+    "vite": "^3.0.7"
   }
 }
