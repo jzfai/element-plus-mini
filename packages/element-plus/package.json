@@ -1,16 +1,11 @@
 {
-  "name": "element-plus",
+  "name": "element-plus-origin",
   "version": "1.0.3",
   "description": "A mini  Library for element-plus",
   "peerDependencies": {
     "vue": "^3.2.0"
   },
-  "style": "dist/index.css",
-  "author": "kuanghua(869653722@qq.com)",
   "license": "MIT",
-  "main": "lib/index.js",
-  "module": "es/index.mjs",
-  "scripts": {
-    "pub": "npm publish"
-  }
+  "main": "index.ts",
+  "module": "index.ts"
 }

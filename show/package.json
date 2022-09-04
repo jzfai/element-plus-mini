@@ -1,11 +1,10 @@
 {
-  "name": "@element-plus/play",
+  "name": "@element-plus/show",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "play:dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "show:dev": "vite",
     "preview": "vite preview"
   },
   "dependencies": {

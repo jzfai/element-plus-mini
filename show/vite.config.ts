@@ -4,9 +4,9 @@ import { defineConfig } from 'vite'
 // @ts-ignore
 import vue from '@vitejs/plugin-vue'
 // @ts-ignore
-import Components from 'unplugin-vue-components/vite'
+// import Components from 'unplugin-vue-components/vite'
 // @ts-ignore
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+// import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 import DefineOptions from 'unplugin-vue-define-options/vite'
 
@@ -28,18 +28,18 @@ export default defineConfig(async ({ mode }) => {
       // ]
     },
     server: {
-      port: 5008,
+      port: 5020,
       host: true,
       https: false
     },
     plugins: [
       vue(),
-      DefineOptions(),
-      Components({
-        include: `${__dirname}/**`,
-        resolvers: ElementPlusResolver({ importStyle: 'sass' }),
-        dts: false
-      })
+      DefineOptions()
+      // Components({
+      //   include: `${__dirname}/**`,
+      //   resolvers: ElementPlusResolver({ importStyle: 'sass' }),
+      //   dts: false
+      // })
     ]
   }
 })

@@ -8,18 +8,32 @@
     "docs:dev": "pnpm -C docs docs:dev",
     "build:start": "pnpm -C internal/build start",
     "stub": "pnpm run -r --parallel stub",
-    "postinstall": "pnpm stub"
+    "postinstall": "pnpm stub",
+    "test": "vitest --ui",
+    "coverage": "vitest run --coverage",
+    "test:ssr": "vitest --config ./ssr-testing/vitest.config.ts"
   },
   "dependencies": {
     "@element-plus/build-utils": "workspace:*",
     "@element-plus/components": "workspace:*",
-    "@element-plus/theme-chalk": "workspace:*"
+    "@element-plus/constants": "workspace:*",
+    "@element-plus/hooks": "workspace:*",
+    "@element-plus/theme-chalk": "workspace:*",
+    "@element-plus/utils": "workspace:*",
+    "element-plus-origin": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "*",
     "@types/sass": "^1.43.1",
+    "@vitest/coverage-c8": "^0.22.1",
+    "@vitest/ui": "^0.22.1",
+    "@vue/test-utils": "^2.0.2",
+    "jsdom": "16.4.0",
     "prettier": "^2.7.1",
-    "sass": "^1.53.0"
+    "resize-observer-polyfill": "^1.5.1",
+    "sass": "^1.53.0",
+    "vitest": "^0.22.1",
+    "puppeteer": "^15.1.1"
   },
   "engines": {
     "node": ">= 16"
