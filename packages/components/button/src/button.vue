@@ -42,7 +42,7 @@ import { Text, computed, ref, useSlots } from 'vue'
 defineOptions({
   name: 'ElButton'
 })
-import { buttonEmits, buttonProps } from './button.ts'
+import { buttonEmits, buttonProps } from './button-api'
 
 //props emit slots
 const props = defineProps(buttonProps)

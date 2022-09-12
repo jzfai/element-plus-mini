@@ -1,10 +1,11 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.web.json" },
-    { "path": "./tsconfig.play.json" },
-    { "path": "./tsconfig.node.json" },
-    { "path": "./tsconfig.vite-config.json" },
-    { "path": "./tsconfig.vitest.json" }
-  ]
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["src/*"],
+      "~/*": ["typings/*"]
+    }
+  },
+  "include": ["packages", "play", "internal", "docs", "typings", "auto-imports.d.ts"],
+  "exclude": ["node_modules", "**/dist"]
 }

@@ -7,6 +7,8 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     IRiCodeLine: typeof import('~icons/ri/code-line')['default']
     IRiFileCopyLine: typeof import('~icons/ri/file-copy-line')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
     VpApp: typeof import('./.vitepress/vitepress/components/vp-app.vue')['default']
     VpContent: typeof import('./.vitepress/vitepress/components/vp-content.vue')['default']
     VpDemo: typeof import('./.vitepress/vitepress/components/vp-demo.vue')['default']
