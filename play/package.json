@@ -16,10 +16,10 @@
     "@vitejs/plugin-vue": "^3.0.3",
     "sass": "^1.26.9",
     "unocss": "^0.39.3",
-    "unplugin-auto-import": "^0.8.8",
+    "unplugin-auto-import": "^0.11.2",
     "unplugin-element-plus": "^0.4.0",
-    "unplugin-vue-components": "^0.19.6",
-    "unplugin-vue-define-options": "^0.6.1",
+    "unplugin-vue-components": "^0.22.8",
+    "unplugin-vue-define-options": "^0.12.2",
     "vite": "^3.0.7"
   }
 }

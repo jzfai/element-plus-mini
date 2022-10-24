@@ -7,5 +7,9 @@ const app = createApp(App)
 import elementPlusMini from 'element-plus-mini'
 import 'element-plus-mini/theme-chalk/index.css'
 
+let data = '111'
+
+console.log()
+
 app.use(elementPlusMini)
 app.mount('#app')

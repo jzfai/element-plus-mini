@@ -12,7 +12,11 @@ import DefineOptions from 'unplugin-vue-define-options/vite'
 
 // @ts-ignore
 import pkg from '@element-plus/build-utils'
+// @ts-ignore
+import pluginDemo from './plugin/plugin-demo'
+
 const { pkgRoot, epRoot } = pkg
+// @ts-ignore
 export default defineConfig(async ({ mode }) => {
   return {
     resolve: {
@@ -39,7 +43,8 @@ export default defineConfig(async ({ mode }) => {
         include: `${__dirname}/**`,
         resolvers: ElementPlusResolver({ importStyle: 'sass' }),
         dts: false
-      })
+      }),
+      pluginDemo({ name: 'plugin-demo' })
     ]
   }
 })

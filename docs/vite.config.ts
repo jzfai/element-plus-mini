@@ -33,7 +33,6 @@ export default defineConfig(async () => {
       Icons({
         autoInstall: true
       }),
-
       UnoCSS(),
       MarkdownTransform(),
       Inspect()

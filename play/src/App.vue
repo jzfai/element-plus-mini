@@ -2,8 +2,9 @@
 
 <template>
   <div>
+    <xm-test />
     <el-badge />
-    <el-button class="el-button" type="success" size="large">i am button</el-button>
+    <el-button type="success" size="large">i am button</el-button>
   </div>
 </template>
 

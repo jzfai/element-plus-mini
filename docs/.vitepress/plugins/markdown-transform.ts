@@ -1,10 +1,10 @@
 // @ts-ignore
-import path from "path";
-import type { Plugin } from "vite";
+import path from 'path'
+import type { Plugin } from 'vite'
 export function MarkdownTransform(): Plugin {
   return {
-    name: "element-plus-md-transform",
-    enforce: "pre",
+    name: 'element-plus-md-transform',
+    enforce: 'pre',
     // config(config) {
     //   console.log("config", config);
     // },
@@ -20,40 +20,36 @@ export function MarkdownTransform(): Plugin {
     //   console.log(id);
     // },
     async transform(code, id) {
-      if (!id.endsWith(".md")) return;
-
-      const componentId = path.basename(id, ".md");
-
+      if (!id.endsWith('.md')) return
+      const componentId = path.basename(id, '.md')
       const append = {
         headers: [],
-        footers: [],
-        scriptSetups: [
-          `const demos = import.meta.globEager('../../examples/${componentId}/*.vue')`,
-        ],
-      };
-
-      return combineMarkdown(
-        code,
-        [combineScriptSetup(append.scriptSetups), ...append.headers],
-        append.footers
-      );
-    },
-  };
+        footers: [`我是尾部`],
+        //得到 /examples/badge下所有.vue文件 -> badge
+        scriptSetups: [`const demos = import.meta.globEager('../../examples/${componentId}/*.vue')`]
+      }
+      return combineMarkdown(code, [combineScriptSetup(append.scriptSetups), ...append.headers], append.footers)
+    }
+  }
 }
 const combineScriptSetup = (codes: string[]) =>
   `\n<script setup>
-${codes.join("\n")}
+${codes.join('\n')}
 </script>
-`;
+`
 
+/*
+ * 给md文档拼接 header和footer
+ * header拼接在文档的 ## Basic Usage 前面
+ * footer则拼接在最后面
+ * */
 const combineMarkdown = (code, headers, footers) => {
-  const frontmatterEnds = code.indexOf("---\n\n") + 4;
-  const firstSubheader = code.search(/\n## \w/);
-  const sliceIndex = firstSubheader < 0 ? frontmatterEnds : firstSubheader;
+  const frontmatterEnds = code.indexOf('---\n\n') + 4
+  const firstSubheader = code.search(/\n## \w/)
+  const sliceIndex = firstSubheader < 0 ? frontmatterEnds : firstSubheader
   if (headers.length > 0) {
-    code =
-      code.slice(0, sliceIndex) + headers.join("\n") + code.slice(sliceIndex);
+    code = code.slice(0, sliceIndex) + headers.join('\n') + code.slice(sliceIndex)
   }
-  code += footers.join("\n");
-  return `${code}\n`;
-};
+  code += footers.join('\n')
+  return `${code}\n`
+}

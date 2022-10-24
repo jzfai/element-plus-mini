@@ -1,30 +1,28 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 // import { useData } from "vitepress";
-import { insertLinkIcon, insertTableWrapper } from "../utils";
+import { insertLinkIcon, insertTableWrapper } from '../utils'
 // import VPPageFooter from './doc-content/vp-page-footer.vue'
 // import VPPageNav from './doc-content/vp-page-nav.vue'
 // import VPTableOfContent from './doc-content/vp-table-of-content.vue'
 // const { page } = useData();
-const content = ref<{ $el: HTMLElement }>();
+const content = ref<{ $el: HTMLElement }>()
 
 function updateDom() {
-  insertLinkIcon(content);
-  insertTableWrapper(content);
+  //给svg加上链接
+  insertLinkIcon(content)
+  //给table属性加上部分class, 如 vp-table，让属性具备样式
+  insertTableWrapper(content)
 }
 </script>
 
 <template>
   <div class="doc-content-wrapper">
     <div class="doc-content-container">
-      <Content
-        ref="content"
-        class="doc-content"
-        @vnode-mounted="updateDom"
-        @vnode-updated="updateDom"
-      />
-      <!--      <VPPageFooter />-->
-      <!--      <VPPageNav />-->
+      <!--  vitepress中自带  -->
+      <Content ref="content" class="doc-content" @vnode-mounted="updateDom" @vnode-updated="updateDom" />
+      <!--  <VPPageFooter />-->
+      <!--  <VPPageNav />-->
     </div>
     <!--    <VPTableOfContent v-if="page.headers" />-->
   </div>
